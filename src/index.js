@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 import sequelize from './database/database.js';
 
 import './models/Project.js';
+import './models/Task.js';
+import './models/User.js';
 
 dotenv.config(); 
 
@@ -11,7 +13,7 @@ const main = async () => {
     try {
         // await sequelize.authenticate();
         // console.log('Connection has been established successfully.');
-        await sequelize.sync({force:true});
+        await sequelize.sync({ force:false });
         
         app.listen(process.env.PORT);
         console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
