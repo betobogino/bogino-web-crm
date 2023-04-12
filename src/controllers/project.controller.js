@@ -12,6 +12,10 @@ export const getProjects = async (req, res) => {
     }
 } 
 
+// const getProject = async = () => {
+
+// }
+
 export const createProject = async (req, res) => {
     try {
         const { name, priority, description} = req.body;
@@ -29,3 +33,11 @@ export const createProject = async (req, res) => {
         res.status(500).json({message: error.message});    
     }
 }
+
+// export const updateProject = async () => {
+
+// }
+
+// export const deleteProject = async () => {
+
+// }
